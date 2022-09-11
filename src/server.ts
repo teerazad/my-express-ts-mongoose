@@ -11,14 +11,6 @@ app.get("/" , (req,res) => {
     res.json({result : "ok5555"});
 });
 
-app.get("/test" , (req,res) => {
-    res.json({result : "ok5555"});
-});
-
-app.get("/testt" , (req,res) => {
-    res.json({result : "ok5555"});
-})
-
 app.listen(3000, () => {
     console.log("Server is connect....")
 });
