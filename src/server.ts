@@ -1,6 +1,6 @@
 import express,{ Request,Response } from "express";
 const mongoose = require('mongoose');
-import {ConnectDB} from "../config/connectdb";
+import {ConnectDB} from "./connectdb";
 
 
 var con = new ConnectDB();
