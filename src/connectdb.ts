@@ -1,18 +1,14 @@
 require('dotenv').config();
-
 const mongoose = require('mongoose');
  
 
 
 export class ConnectDB {
     getName() : any {
-        const {modo} = process.env;
-        const url : string = 'mongodb://root:password@localhost:5555/?authMechanism=DEFAULT'
+        const {MONGO_USERNAME,MONGO_PASSWORD,LOCAHOST} = process.env;
+        const url : string = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${LOCAHOST}:5555/?authMechanism=DEFAULT`
         mongoose.connect(url);
-        const Catt = mongoose.model('tttttttt', { name: String });
-        console.log(modo)
+        const Catt = mongoose.model('lllllllll', { name: String });
+        console.log(MONGO_USERNAME)
     }
 }
-
-// const kitty = new Catt({ name: 'Zildjian' });
-// kitty.save().then(() => console.log('meow'));
